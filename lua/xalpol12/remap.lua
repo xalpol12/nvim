@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 -- open netrw keymap
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 

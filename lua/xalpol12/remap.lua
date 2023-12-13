@@ -26,7 +26,3 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 -- copy to global system buffer
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
-
--- navigate previous/next tabs
---vim.keymap.set("n", "<S-Left>", ":tabprevious<CR>")
---vim.keymap.set("n", "<S-Right>", ":tabnext<CR>")

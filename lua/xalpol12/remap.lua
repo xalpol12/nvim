@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 -- open netrw keymap
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- moving whole blocks of code when in visual line mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -26,3 +26,7 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 -- copy to global system buffer
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
+
+-- navigate previous/next tabs
+--vim.keymap.set("n", "<S-Left>", ":tabprevious<CR>")
+--vim.keymap.set("n", "<S-Right>", ":tabnext<CR>")

@@ -26,5 +26,3 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 -- copy to global system buffer
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
-
-

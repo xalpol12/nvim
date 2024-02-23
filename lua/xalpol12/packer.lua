@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
   use {
       'nvim-tree/nvim-tree.lua',
   }
+  use 'nvim-tree/nvim-web-devicons'
   use {
       "nvim-lualine/lualine.nvim",
       requires = { "nvim-tree/nvim-web-devicons", opt = true }
@@ -75,6 +76,12 @@ return require('packer').startup(function(use)
           {'hrsh7th/cmp-nvim-lsp'},
           {'L3MON4D3/LuaSnip'},
       }
+  }
+
+  -- tmux integration
+  use {
+      'christoomey/vim-tmux-navigator',
+      lazy = false,
   }
 
   -- auto setup after cloning config

@@ -9,8 +9,8 @@ local ensure_packer = function()
     end
     return false
   end
-  
   local packer_bootstrap = ensure_packer()
+
 
 -- packer setup 
 return require('packer').startup(function(use)
@@ -24,6 +24,19 @@ return require('packer').startup(function(use)
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use ('mbbill/undotree')
   use ('tpope/vim-fugitive')
+
+  -- lazygit
+  use({
+      "kdheepak/lazygit.nvim",
+      -- optional for floating window border decoration
+      requires = {
+          "nvim-telescope/telescope.nvim",
+          "nvim-lua/plenary.nvim",
+      },
+      config = function()
+          require("telescope").load_extension("lazygit")
+      end,
+  })
 
   --interface:
   use {
@@ -83,6 +96,13 @@ return require('packer').startup(function(use)
       'christoomey/vim-tmux-navigator',
       lazy = false,
   }
+
+  -- frontend specific
+  use { 'windwp/nvim-ts-autotag' }
+  use { 'windwp/nvim-autopairs',
+      disable_filetype = { "TelescopePrompt", "vim" },
+  }
+
 
   -- auto setup after cloning config
     if packer_bootstrap then

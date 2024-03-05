@@ -91,6 +91,9 @@ return require('packer').startup(function(use)
       }
   }
 
+  -- better diagnostics from lsp
+  use { 'folke/trouble.nvim' }
+
   -- tmux integration
   use {
       'christoomey/vim-tmux-navigator',

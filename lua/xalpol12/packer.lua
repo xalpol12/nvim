@@ -100,10 +100,13 @@ return require('packer').startup(function(use)
       lazy = false,
   }
 
-  -- frontend specific
-  use { 'windwp/nvim-ts-autotag' }
-  use { 'windwp/nvim-autopairs',
-      disable_filetype = { "TelescopePrompt", "vim" },
+  -- auto-close brackets
+  use {
+      "windwp/nvim-autopairs",
+      event = "InsertEnter",
+      config = function()
+          require("nvim-autopairs").setup {}
+      end
   }
 
 

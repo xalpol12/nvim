@@ -9,7 +9,6 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {
-        'angularls',
         'bashls',
         'clangd',
         'docker_compose_language_service',

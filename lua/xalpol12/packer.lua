@@ -91,6 +91,12 @@ return require('packer').startup(function(use)
       }
   }
 
+  -- formatter
+  use {
+      'nvimdev/guard.nvim',
+      requires = { 'nvimdev/guard-collection', }
+  }
+
   -- better diagnostics from lsp
   use { 'folke/trouble.nvim' }
 
